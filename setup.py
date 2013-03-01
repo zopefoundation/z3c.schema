@@ -38,7 +38,7 @@ def alltests():
 
 setup(
     name = 'z3c.schema',
-    version='1.0.0',
+    version='1.0.1.dev0',
     author = 'Zope Community',
       author_email = "zope-dev@zope.org",
       description = "Additional schema fields for Zope 3",
