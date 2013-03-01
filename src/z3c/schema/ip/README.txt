@@ -10,10 +10,10 @@ field:
 
 Now make sure the IP addresses validate:
 
-  >>> myip.validate(u'10.0.0.1')
+  >>> myip.validate(10)
   Traceback (most recent call last):
   ...
-  WrongType: (u'10.0.0.1', <type 'str'>, '')
+  WrongType: (10, <type 'str'>, '')
 
   >>> myip.validate('12.123.231.wee')
   Traceback (most recent call last):

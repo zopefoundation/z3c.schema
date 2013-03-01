@@ -4,13 +4,8 @@
 #
 ###############################################################################
 """Refline Recruiter Tests
-
-$Id$
 """
-__docformat__ = 'restructuredtext'
-
 from zope.schema.interfaces import RequiredMissing
-from zope.schema.tests.test_field import FieldTestBase
 import doctest
 import unittest
 
@@ -18,7 +13,7 @@ from z3c.schema.hostname import HostName
 from z3c.schema.hostname import InvalidHostName
 
 
-class HostNameTest(FieldTestBase):
+class HostNameTest(unittest.TestCase):
 
     _Field_Factory = HostName
     _convert = str
@@ -51,7 +46,10 @@ class HostNameTest(FieldTestBase):
 
 def test_suite():
     return unittest.TestSuite((
-        doctest.DocFileSuite('README.txt',
-            optionflags=doctest.NORMALIZE_WHITESPACE|doctest.ELLIPSIS,),
+        doctest.DocFileSuite(
+                'README.txt',
+                optionflags=doctest.NORMALIZE_WHITESPACE|\
+                            doctest.ELLIPSIS|\
+                            doctest.IGNORE_EXCEPTION_DETAIL),
         unittest.makeSuite(HostNameTest),
         ))

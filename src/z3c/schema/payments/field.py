@@ -11,25 +11,22 @@
 # FOR A PARTICULAR PURPOSE.
 #
 ##############################################################################
+"""ISO 7812 Credit Card
 """
-$Id:$
-"""
-__docformat__ = "reStructuredText"
-
 import zope.interface
-import interfaces
+from . import interfaces
 
 def isValidCreditCard(cardNum):
     """Returns True if the credit card number is a valid Luhn (Mod 10) number
-       and False if not. This, of course, does not validate the number, but 
+       and False if not. This, of course, does not validate the number, but
        will catch typos. There is the chance that two typographic errors could
        return a false positive if they offset one anoter, but the likelihood
        is low and pre-validating is fast"""
-    
+
     financialIndustries = ['3','4','5','6']
     if cardNum[1] not in financialIndustries:
         return False
-        
+
     total = pos = 0
     for digit in cardNum[::-1]:
         if pos % 2 == 0:
@@ -37,17 +34,16 @@ def isValidCreditCard(cardNum):
         else:
             multiplier = 2
         product = int(digit) * multiplier
-        total += product / 10 + product % 10
+        total += product // 10 + product % 10
         pos += 1
     if total % 10 == 0:
         return True
     return False
-    
+
+@zope.interface.implementer(interfaces.IISO7812CreditCard)
 class ISO7812CreditCard(zope.schema.TextLine):
     """A valid ISO 7812 credit card number."""
     __doc__ = interfaces.IISO7812CreditCard.__doc__
-
-    zope.interface.implements(interfaces.IISO7812CreditCard)
 
     def constraint(self, value):
         allDigits = True

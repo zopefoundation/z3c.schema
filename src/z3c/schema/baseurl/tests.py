@@ -11,17 +11,16 @@
 # FOR A PARTICULAR PURPOSE.
 #
 ##############################################################################
-
-from zope.schema.interfaces import RequiredMissing
-from zope.schema.tests.test_field import FieldTestBase
+"""Base URL Field
+"""
 import doctest
 import unittest
+from zope.schema.interfaces import RequiredMissing
 
-from z3c.schema.baseurl import BaseURL
-from z3c.schema.baseurl import InvalidBaseURL
+from z3c.schema.baseurl import BaseURL, InvalidBaseURL
 
 
-class BaseURLTest(FieldTestBase):
+class BaseURLTest(unittest.TestCase):
 
     _Field_Factory = BaseURL
     _convert = str
@@ -52,7 +51,10 @@ class BaseURLTest(FieldTestBase):
 
 def test_suite():
     return unittest.TestSuite((
-        doctest.DocFileSuite('README.txt',
-            optionflags=doctest.NORMALIZE_WHITESPACE|doctest.ELLIPSIS,),
+        doctest.DocFileSuite(
+                'README.txt',
+                optionflags=doctest.NORMALIZE_WHITESPACE|\
+                            doctest.ELLIPSIS|\
+                            doctest.IGNORE_EXCEPTION_DETAIL),
         unittest.makeSuite(BaseURLTest),
         ))

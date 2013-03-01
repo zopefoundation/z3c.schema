@@ -23,10 +23,10 @@ import zope.schema
 from z3c.schema.dateselect import interfaces
 
 
+@zope.interface.implementer(interfaces.IDateSelect)
 class DateSelect(zope.schema.Date):
-    zope.interface.implements(interfaces.IDateSelect)
 
-    yearRange = range(1900, 2100)
+    yearRange = list(range(1900, 2100))
     initialDate = None # set a date or today is used
 
     def __init__(self, yearRange=None, initialDate=None, **kw):

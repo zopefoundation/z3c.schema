@@ -11,11 +11,8 @@
 # FOR A PARTICULAR PURPOSE.
 #
 ##############################################################################
+"""IP Address
 """
-$Id$
-"""
-__docformat__ = "reStructuredText"
-
 import zope.interface
 import zope.schema
 
@@ -38,9 +35,9 @@ def isValidIPAddress(addr):
     return True
 
 
-class IPAddress(zope.schema.BytesLine):
+@zope.interface.implementer(interfaces.IIPAddress)
+class IPAddress(zope.schema.NativeStringLine):
     """A valid IP address."""
-    zope.interface.implements(interfaces.IIPAddress)
 
     def _validate(self, value):
         super(IPAddress, self)._validate(value)

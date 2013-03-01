@@ -23,10 +23,9 @@ from zope.schema.interfaces import IField, ValidationError
 from z3c.schema.optchoice import interfaces
 
 
+@zope.interface.implementer(interfaces.IOptionalChoice)
 class OptionalChoice(zope.schema.Choice):
     """Optional Choice field."""
-
-    zope.interface.implements(interfaces.IOptionalChoice)
 
     def __init__(self, value_type, **kw):
         super(OptionalChoice, self).__init__(**kw)

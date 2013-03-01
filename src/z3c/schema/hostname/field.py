@@ -44,18 +44,17 @@ isValidHostName = re.compile(
     ).match
 
 
+@zope.interface.implementer(interfaces.IHostName)
 class HostName(zope.schema.URI):
     """HostName schema field.
 
     This is a IP Address or a host name.
     """
 
-    zope.interface.implements(interfaces.IHostName)
-
     def _validate(self, value):
         if isValidHostName(value):
             return
-        raise interfaces.InvalidHostName, value
+        raise interfaces.InvalidHostName(value)
 
     def fromUnicode(self, value):
         v = str(value.strip())

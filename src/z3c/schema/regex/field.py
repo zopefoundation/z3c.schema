@@ -23,20 +23,19 @@ import zope.schema
 from z3c.schema.regex import interfaces
 
 
+@zope.interface.implementer(interfaces.IRegex)
 class Regex(zope.schema.ASCIILine):
     """Regex schema field.
 
     Must be a compilable regular expression
     """
 
-    zope.interface.implements(interfaces.IRegex)
-
     def _validate(self, value):
         super(Regex, self)._validate(value)
         try:
             re.compile(value)
-        except re.error, e:
-            raise interfaces.InvalidRegex, '%r, %s' % (value, e)
+        except re.error as e:
+            raise interfaces.InvalidRegex('%r, %s' % (value, e))
 
     def fromUnicode(self, value):
         v = str(value.strip())

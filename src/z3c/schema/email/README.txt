@@ -18,10 +18,10 @@ Check that the constraints of the value are fulfilled:
 
 Now make sure the E-mail addresses validate:
 
-  >>> email.validate('foo@bar.com')
+  >>> email.validate(10)
   Traceback (most recent call last):
   ...
-  WrongType: ('foo@bar.com', <type 'unicode'>, '')
+  WrongType: (10, <type 'unicode'>, '')
 
   >>> email.validate(u'foo@bar.')
   Traceback (most recent call last):

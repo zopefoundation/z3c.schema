@@ -30,6 +30,7 @@ isValidBaseURL = re.compile(
     ).match
 
 
+@zope.interface.implementer(interfaces.IBaseURL)
 class BaseURL(zope.schema.URI):
     """Base URL field.
     
@@ -37,14 +38,12 @@ class BaseURL(zope.schema.URI):
     append a view name.
     """
 
-    zope.interface.implements(interfaces.IBaseURL)
-
     def _validate(self, value):
         if isValidBaseURL(value) and value.endswith('/') and \
             not value.endswith(':/'):
             return
 
-        raise interfaces.InvalidBaseURL, value
+        raise interfaces.InvalidBaseURL(value)
 
     def fromUnicode(self, value):
         v = str(value.strip())

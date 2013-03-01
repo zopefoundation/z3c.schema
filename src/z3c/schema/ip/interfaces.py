@@ -12,17 +12,13 @@
 #
 ##############################################################################
 """IP Address Field Interfaces
-
-$Id$
 """
-__docformat__ = "reStructuredText"
-
 import zope.schema
 import zope.schema.interfaces
 
 from z3c.schema.i18n import MessageFactory as _
 
-class IIPAddress(zope.schema.interfaces.IBytesLine):
+class IIPAddress(zope.schema.interfaces.INativeStringLine):
     """A valid IP address field."""
 
 class NotValidIPAdress(zope.schema.ValidationError):

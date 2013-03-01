@@ -13,7 +13,7 @@ the first attribute is the range of years that will be offered to the user:
 
   >>> birthday = field.DateSelect(
   ...     title=u'Birthday',
-  ...     yearRange=range(1920, 2007))
+  ...     yearRange=list(range(1920, 2007)))
 
 In this case the user will be offered all years from 1920 to 2007.
 
