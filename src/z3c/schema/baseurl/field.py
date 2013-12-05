@@ -25,7 +25,7 @@ from z3c.schema.baseurl import interfaces
 
 
 isValidBaseURL = re.compile(
-    r"[a-zA-z0-9+.-]+:"   # scheme
+    r"[a-zA-Z0-9+.-]+:"   # scheme
     r"\S*$"               # non space (should be pickier)
     ).match
 
