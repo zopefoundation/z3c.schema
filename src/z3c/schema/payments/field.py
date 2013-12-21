@@ -24,7 +24,7 @@ def isValidCreditCard(cardNum):
        is low and pre-validating is fast"""
 
     financialIndustries = ['3','4','5','6']
-    if cardNum[1] not in financialIndustries:
+    if cardNum[0] not in financialIndustries:
         return False
 
     total = pos = 0

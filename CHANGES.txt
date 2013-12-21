@@ -5,7 +5,8 @@ CHANGES
 1.0.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix credit card industry validation to check the first number, not
+  the second.
 
 
 1.0.0 (2013-03-01)

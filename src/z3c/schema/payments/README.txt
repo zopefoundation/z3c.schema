@@ -66,7 +66,7 @@ valid card must start with one of these numbers:
     NotValidISO7812CreditCard: 2222222222222224
 
     >>> cc.validate(u'3333333333333331')
-    >>> cc.validate(u'4444444444444448')
+    >>> cc.validate(u'4111111111111111')
     >>> cc.validate(u'5555555555555557')
     >>> cc.validate(u'3333333333333331')
     >>> cc.validate(u'6666666666666664')
@@ -129,4 +129,3 @@ number registered with a financial institution:
     Traceback (most recent call last):
     ...
     NotValidISO7812CreditCard: 4444444444444449
-
