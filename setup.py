@@ -17,7 +17,8 @@ import os
 from setuptools import setup, find_packages
 
 def read(*rnames):
-    text = open(os.path.join(os.path.dirname(__file__), *rnames)).read()
+    with open(os.path.join(os.path.dirname(__file__), *rnames)) as f:
+        text = f.read()
     return text + '\n\n'
 
 def alltests():
@@ -69,8 +70,9 @@ setup(
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: Implementation :: CPython',
+        'Programming Language :: Python :: Implementation :: PyPy',
         'Natural Language :: English',
-        'Operating System :: Microsoft :: Windows',
+        'Operating System :: Microsoft :: OS Independent',
         'Topic :: Internet :: WWW/HTTP',
         'Framework :: Zope3'
     ],
