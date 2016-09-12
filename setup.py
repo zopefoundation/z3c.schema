@@ -14,11 +14,11 @@
 """Setup
 """
 import os
-import xml.sax.saxutils
 from setuptools import setup, find_packages
 
 def read(*rnames):
-    text = open(os.path.join(os.path.dirname(__file__), *rnames)).read()
+    with open(os.path.join(os.path.dirname(__file__), *rnames)) as f:
+        text = f.read()
     return text + '\n\n'
 
 def alltests():
@@ -40,8 +40,8 @@ setup(
     name = 'z3c.schema',
     version='1.0.1.dev0',
     author = 'Zope Community',
-      author_email = "zope-dev@zope.org",
-      description = "Additional schema fields for Zope 3",
+    author_email = "zope-dev@zope.org",
+    description = "Additional schema fields for Zope 3",
     long_description=(
         read('README.txt') +
         '.. contents::\n\n'+
@@ -54,7 +54,7 @@ setup(
         read('src', 'z3c', 'schema', 'optchoice', 'README.txt') +
         read('src', 'z3c', 'schema', 'payments', 'README.txt') +
         read('src', 'z3c', 'schema', 'regex', 'README.txt')
-        ),
+    ),
     license = 'ZPL 2.1',
     keywords = 'zope zope3 z3c schema',
     classifiers = [
@@ -64,15 +64,18 @@ setup(
         'License :: OSI Approved :: Zope Public License',
         'Programming Language :: Python',
         'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.3',
+        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: Implementation :: CPython',
+        'Programming Language :: Python :: Implementation :: PyPy',
         'Natural Language :: English',
-        'Operating System :: Microsoft :: Windows',
+        'Operating System :: OS Independent',
         'Topic :: Internet :: WWW/HTTP',
-        'Framework :: Zope3'],
+        'Framework :: Zope3'
+    ],
     url = 'http://pypi.python.org/pypi/z3c.schema',
     packages = find_packages('src'),
     include_package_data=True,
@@ -81,18 +84,19 @@ setup(
     extras_require = dict(
       test=[
           'zope.testing',
-           ]
+          'zope.testrunner',
+      ]
     ),
     install_requires = [
       'setuptools',
       'zope.i18nmessageid',
       'zope.interface',
       'zope.schema >= 3.6',
-      ],
+    ],
     tests_require = [
         'zope.testing',
         'zope.testrunner',
-        ],
+    ],
     test_suite = '__main__.alltests',
     zip_safe=False,
 )
