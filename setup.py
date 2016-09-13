@@ -43,7 +43,7 @@ setup(
     author_email = "zope-dev@zope.org",
     description = "Additional schema fields for Zope 3",
     long_description=(
-        read('README.txt')
+        read('README.rst')
     ),
     license = 'ZPL 2.1',
     keywords = 'zope zope3 z3c schema',
