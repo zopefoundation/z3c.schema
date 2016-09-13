@@ -19,3 +19,11 @@ It does not validate regular expressions that do not compile.
   ...
   InvalidRegex: '(i', unbalanced parenthesis
 
+When used to process input, only valid values are returned
+
+  >>> regex.fromUnicode(u'.*')
+  '.*'
+  >>> regex.fromUnicode(u'(i')
+  Traceback (most recent call last):
+  ...
+  InvalidRegex: '(i', unbalanced parenthesis
