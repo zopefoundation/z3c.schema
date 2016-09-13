@@ -39,7 +39,7 @@ easier to use it for the tests:
   >>> isValidMailAddress(u'foo.blah@bar.com')
   True
 
-  # Name failures
+* Name failures
 
   >>> isValidMailAddress(u'foo\r@bar.com')
   False
@@ -48,7 +48,7 @@ easier to use it for the tests:
   >>> isValidMailAddress(u'foo:@bar.com')
   False
 
-  # Overall failures
+* Overall failures
 
   >>> isValidMailAddress(u'')
   False
@@ -61,7 +61,7 @@ easier to use it for the tests:
   >>> isValidMailAddress(u'foo@bar.com.')
   False
 
-  # Domain failures
+* Domain failures
 
   >>> isValidMailAddress(u'foo@')
   False

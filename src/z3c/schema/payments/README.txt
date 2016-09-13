@@ -1,6 +1,6 @@
-===================
-z3c.schema.payments
-===================
+=============================
+ Payment Data (Credit Cards)
+=============================
 
 z3c.schema.payments provides some level of error detection in payment data
 prior to storing the information or sending it to a payment processor.
@@ -9,7 +9,7 @@ this could conceivably be extended to other payment forms
 
 
 Credit Cards
-------------
+============
 
 Credit card numbering specifications are defined in ISO 7812-1:1983. Verifying
 that the credit card number supplied by a user conforms to the ISO standard

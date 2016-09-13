@@ -12,7 +12,6 @@
 #
 ##############################################################################
 """
-$Id:$
 """
 __docformat__ = "reStructuredText"
 
@@ -23,7 +22,7 @@ import zope.schema
 
 from z3c.schema.baseurl import interfaces
 
-
+#: Determine whether the URL is a base URL.
 isValidBaseURL = re.compile(
     r"[a-zA-Z0-9+.-]+:"   # scheme
     r"\S*$"               # non space (should be pickier)
@@ -33,7 +32,7 @@ isValidBaseURL = re.compile(
 @zope.interface.implementer(interfaces.IBaseURL)
 class BaseURL(zope.schema.URI):
     """Base URL field.
-    
+
     Such a base url must end with a ``/``. This makes it simpler for
     append a view name.
     """

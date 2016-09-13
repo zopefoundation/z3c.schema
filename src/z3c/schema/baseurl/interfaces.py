@@ -12,7 +12,6 @@
 #
 ##############################################################################
 """
-$Id$
 """
 __docformat__ = "reStructuredText"
 
@@ -22,10 +21,10 @@ import zope.schema.interfaces
 from z3c.schema.i18n import MessageFactory as _
 
 
-class IBaseURL(zope.schema.interfaces.IURI, 
-                zope.schema.interfaces.IFromUnicode):
+class IBaseURL(zope.schema.interfaces.IURI,
+               zope.schema.interfaces.IFromUnicode):
     """Base URL field.
-    
+
     Such a base url must end with a ``/``. This makes it simpler for
     append a view name.
     """

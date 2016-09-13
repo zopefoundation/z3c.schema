@@ -1,9 +1,12 @@
-========
-BaseURL
-========
+======
+ URLs
+======
 
-A base url field is useful if you need to append view names to a url and 
-doesn't like to check every time if the url ends with a backslash before you 
+BaseURL
+=======
+
+A base url field is useful if you need to append view names to a url and
+doesn't like to check every time if the url ends with a backslash before you
 append the view name.
 
 Let's first create the BaseURL field:

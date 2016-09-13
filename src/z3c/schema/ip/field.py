@@ -11,7 +11,7 @@
 # FOR A PARTICULAR PURPOSE.
 #
 ##############################################################################
-"""IP Address
+"""
 """
 import zope.interface
 import zope.schema

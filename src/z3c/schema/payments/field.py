@@ -11,7 +11,7 @@
 # FOR A PARTICULAR PURPOSE.
 #
 ##############################################################################
-"""ISO 7812 Credit Card
+"""
 """
 import zope.interface
 from . import interfaces
@@ -20,7 +20,7 @@ def isValidCreditCard(cardNum):
     """Returns True if the credit card number is a valid Luhn (Mod 10) number
        and False if not. This, of course, does not validate the number, but
        will catch typos. There is the chance that two typographic errors could
-       return a false positive if they offset one anoter, but the likelihood
+       return a false positive if they offset one another, but the likelihood
        is low and pre-validating is fast"""
 
     financialIndustries = ['3','4','5','6']
