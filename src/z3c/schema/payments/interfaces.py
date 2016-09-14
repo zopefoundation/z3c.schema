@@ -12,7 +12,6 @@
 #
 ##############################################################################
 """
-$Id:$
 """
 __docformat__ = "reStructuredText"
 
@@ -24,6 +23,6 @@ from z3c.schema.i18n import MessageFactory as _
 
 class IISO7812CreditCard(zope.schema.interfaces.ITextLine):
     """A credit card with a valid check digit"""
-    
+
 class NotValidISO7812CreditCard(zope.schema.ValidationError):
     __doc__ = _("""The credit card number is incorrect.""")

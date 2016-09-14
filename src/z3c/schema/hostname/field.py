@@ -12,7 +12,6 @@
 #
 ##############################################################################
 """
-$Id:$
 """
 __docformat__ = "reStructuredText"
 
@@ -24,6 +23,7 @@ import zope.schema
 from z3c.schema.hostname import interfaces
 
 
+#: Check for a valid hostname.
 isValidHostName = re.compile(
 
     # BEGIN: host

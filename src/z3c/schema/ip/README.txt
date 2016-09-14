@@ -1,6 +1,6 @@
-================
-IP Address Field
-================
+==============
+ IP Addresses
+==============
 
 This module provides a field for IP addresses. Let's first generate an IP
 field:
@@ -31,7 +31,7 @@ easier to use it for the tests:
   >>> isValidIPAddress('255.255.255.255')
   True
 
-  # Number of pieces failures
+* Number of pieces failures
 
   >>> isValidIPAddress('12.3.1')
   False
@@ -40,14 +40,14 @@ easier to use it for the tests:
   >>> isValidIPAddress('1.0.0.0.')
   False
 
-  # Not integers failures
+* Not integers failures
 
   >>> isValidIPAddress('x.0.0.0')
   False
   >>> isValidIPAddress('0x8.0.0.0')
   False
 
-  # Not in range failures
+* Not in range failures
 
   >>> isValidIPAddress('-1.0.0.0')
   False

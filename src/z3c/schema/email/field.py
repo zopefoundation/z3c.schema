@@ -12,7 +12,7 @@
 #
 ##############################################################################
 """
-$Id$
+
 """
 __docformat__ = "reStructuredText"
 
@@ -76,7 +76,6 @@ def isValidMailAddress(addr):
 @zope.interface.implementer(interfaces.IRFC822MailAddress)
 class RFC822MailAddress(zope.schema.TextLine):
     """A valid email address."""
-    __doc__ = interfaces.IRFC822MailAddress.__doc__
 
     def constraint(self, value):
         return '\n' not in value and '\r' not in value

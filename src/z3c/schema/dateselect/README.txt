@@ -1,10 +1,10 @@
-========================
-The Date Selection Field
-========================
+================
+ Date Selection
+================
 
 The date selection field was designed to support the UI requirement of
 allowing users to select a date using multi-select input fields. The
-``DateSelect`` field extends the ``Date`` field merely by a few additional
+``DateSelect`` field extends the :class:`zope.schema.Date` field merely by a few additional
 attributes.
 
   >>> from z3c.schema.dateselect import field
@@ -31,5 +31,5 @@ The second attribute allows you to specify an initial date for the selection:
   >>> birthday.initialDate
   datetime.date(2000, 1, 1)
 
-And this is really it. Please read the documentation on the ``Date`` for more
+And this is really it. Please read the documentation on the :class:`~zope.schema.Date` for more
 information.

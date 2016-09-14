@@ -1,6 +1,6 @@
-========================
-Regular expression field
-========================
+=====================
+ Regular Expressions
+=====================
 
 Let's first create the regex field.
 
@@ -19,7 +19,7 @@ It does not validate regular expressions that do not compile.
   ...
   InvalidRegex: '(i', unbalanced parenthesis
 
-When used to process input, only valid values are returned
+When used to process input, only valid values are returned.
 
   >>> regex.fromUnicode(u'.*')
   '.*'

@@ -38,22 +38,12 @@ def alltests():
 
 setup(
     name = 'z3c.schema',
-    version='1.0.1.dev0',
+    version=read('version.txt').strip(),
     author = 'Zope Community',
     author_email = "zope-dev@zope.org",
     description = "Additional schema fields for Zope 3",
     long_description=(
-        read('README.txt') +
-        '.. contents::\n\n'+
-        read('CHANGES.txt') +
-        read('src', 'z3c', 'schema', 'baseurl', 'README.txt') +
-        read('src', 'z3c', 'schema', 'dateselect', 'README.txt') +
-        read('src', 'z3c', 'schema', 'email', 'README.txt') +
-        read('src', 'z3c', 'schema', 'hostname', 'README.txt') +
-        read('src', 'z3c', 'schema', 'ip', 'README.txt') +
-        read('src', 'z3c', 'schema', 'optchoice', 'README.txt') +
-        read('src', 'z3c', 'schema', 'payments', 'README.txt') +
-        read('src', 'z3c', 'schema', 'regex', 'README.txt')
+        read('README.rst')
     ),
     license = 'ZPL 2.1',
     keywords = 'zope zope3 z3c schema',

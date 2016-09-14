@@ -12,7 +12,7 @@
 #
 ##############################################################################
 """
-$Id$
+
 """
 __docformat__ = "reStructuredText"
 
@@ -22,7 +22,7 @@ import zope.schema.interfaces
 from z3c.schema.i18n import MessageFactory as _
 
 
-class IHostName(zope.schema.interfaces.IURI, 
+class IHostName(zope.schema.interfaces.IURI,
                 zope.schema.interfaces.IFromUnicode):
     """Host name field."""
 
