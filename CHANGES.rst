@@ -2,18 +2,19 @@
 CHANGES
 =======
 
-1.0.1 (unreleased)
+1.1.0 (unreleased)
 ------------------
 
 - Fixed credit card industry validation to check the first number, not
   the second.
 
-- Added support for Python 3.4 and 3.5.
+- Added support for Python 3.4, 3.5 and PyPy.
 
 - Dropped support for Python 2.6.
 
 - Achieve 100% code test coverage.
 
+- Moved documentation to http://z3cschema.readthedocs.io (see :pr:`11`).
 
 1.0.0 (2013-03-01)
 ------------------
