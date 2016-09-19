@@ -2,7 +2,7 @@
 CHANGES
 =======
 
-1.1.0 (unreleased)
+1.1.0 (2016-09-19)
 ------------------
 
 - Fixed credit card industry validation to check the first number, not
