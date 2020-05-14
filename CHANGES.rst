@@ -5,7 +5,9 @@ CHANGES
 1.2.0 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add support for Python 3.6, 3.7, 3.8, PyPy3.
+
+- Drop support for Python 3.3 and 3.4.
 
 
 1.1.0 (2016-09-19)
