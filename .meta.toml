@@ -1,0 +1,32 @@
+# Generated from:
+# https://github.com/zopefoundation/meta/tree/master/config/pure-python
+[meta]
+template = "pure-python"
+commit-id = "ff37be82c6e4d7c4f0f96f4937f2d14d1aadae67"
+
+[python]
+with-appveyor = false
+with-pypy = true
+with-legacy-python = true
+with-docs = true
+with-sphinx-doctests = false
+
+[tox]
+use-flake8 = true
+
+[coverage]
+fail-under = 99
+
+[check-manifest]
+ignore-bad-ideas = [
+    "src/z3c/schema/i18n/locales/de/LC_MESSAGES/z3c.schema.mo",
+    "src/z3c/schema/i18n/locales/fr/LC_MESSAGES/z3c.schema.mo",
+    "src/z3c/schema/i18n/locales/nl/LC_MESSAGES/z3c.schema.mo",
+    "src/z3c/schema/i18n/locales/ru/LC_MESSAGES/z3c.schema.mo",
+    ]
+
+[manifest]
+additional-rules = [
+    "recursive-include src *.po",
+    "recursive-include src *.pot",
+    ]
