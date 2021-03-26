@@ -11,10 +11,14 @@
 # FOR A PARTICULAR PURPOSE.
 #
 ##############################################################################
-"""
-$Id$
-"""
-
-from z3c.schema.baseurl.interfaces import *
+from z3c.schema.baseurl.interfaces import IBaseURL, InvalidBaseURL
 from z3c.schema.baseurl.field import isValidBaseURL
 from z3c.schema.baseurl.field import BaseURL
+
+
+__all__ = [
+    'IBaseURL',
+    'InvalidBaseURL',
+    'isValidBaseURL',
+    'BaseURL',
+]

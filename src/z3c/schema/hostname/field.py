@@ -41,7 +41,7 @@ isValidHostName = re.compile(
 
     # port
     r"(:[\d]{1,5})?$"
-    ).match
+).match
 
 
 @zope.interface.implementer(interfaces.IHostName)

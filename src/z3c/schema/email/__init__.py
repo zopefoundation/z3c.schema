@@ -11,10 +11,15 @@
 # FOR A PARTICULAR PURPOSE.
 #
 ##############################################################################
-"""
-$Id$
-"""
-
-from z3c.schema.email.interfaces import *
+from z3c.schema.email.interfaces import IRFC822MailAddress
+from z3c.schema.email.interfaces import NotValidRFC822MailAdress
 from z3c.schema.email.field import isValidMailAddress
 from z3c.schema.email.field import RFC822MailAddress
+
+
+__all__ = [
+    'IRFC822MailAddress',
+    'NotValidRFC822MailAdress',
+    'isValidMailAddress',
+    'RFC822MailAddress',
+]

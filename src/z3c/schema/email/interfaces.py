@@ -11,11 +11,6 @@
 # FOR A PARTICULAR PURPOSE.
 #
 ##############################################################################
-"""
-
-"""
-__docformat__ = "reStructuredText"
-
 import zope.schema
 import zope.schema.interfaces
 

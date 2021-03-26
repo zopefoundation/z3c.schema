@@ -24,5 +24,6 @@ from z3c.schema.i18n import MessageFactory as _
 class IRegex(zope.schema.interfaces.IASCIILine):
     """Regular Expression field"""
 
+
 class InvalidRegex(zope.schema.ValidationError):
     __doc__ = _("""The specified regular expression is not valid.""")

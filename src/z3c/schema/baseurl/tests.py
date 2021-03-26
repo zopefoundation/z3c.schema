@@ -27,7 +27,7 @@ class BaseURLTest(unittest.TestCase):
 
     def testValidate(self):
         field = self._Field_Factory(title=u'BaseURL field', description=u'',
-            readonly=False, required=False)
+                                    readonly=False, required=False)
         field.validate(None)
         field.validate(self._convert('host:123.123.123.123/'))
         field.validate(self._convert('host:123/'))
@@ -36,7 +36,7 @@ class BaseURLTest(unittest.TestCase):
 
     def testValidateRequired(self):
         field = self._Field_Factory(title=u'BaseURL field', description=u'',
-            readonly=False, required=True)
+                                    readonly=False, required=True)
         self.assertRaises(RequiredMissing, field.validate, None)
 
     def testBadStringType(self):
@@ -46,15 +46,15 @@ class BaseURLTest(unittest.TestCase):
     def test_newlines(self):
         field = self._Field_Factory(title=u'BaseURL field')
         self.assertRaises(InvalidBaseURL, field.validate,
-            self._convert('host\nfoo'))
+                          self._convert('host\nfoo'))
 
 
 def test_suite():
     return unittest.TestSuite((
         doctest.DocFileSuite(
-                'README.txt',
-                optionflags=doctest.NORMALIZE_WHITESPACE|\
-                            doctest.ELLIPSIS|\
-                            doctest.IGNORE_EXCEPTION_DETAIL),
+            'README.txt',
+            optionflags=doctest.NORMALIZE_WHITESPACE |
+            doctest.ELLIPSIS |
+            doctest.IGNORE_EXCEPTION_DETAIL),
         unittest.makeSuite(BaseURLTest),
-        ))
+    ))

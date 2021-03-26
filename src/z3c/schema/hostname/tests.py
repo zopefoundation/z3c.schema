@@ -27,7 +27,7 @@ class HostNameTest(unittest.TestCase):
 
     def testValidate(self):
         field = self._Field_Factory(title=u'HostName field', description=u'',
-            readonly=False, required=False)
+                                    readonly=False, required=False)
         field.validate(None)
         field.validate(self._convert('host'))
         field.validate(self._convert('123.123.123.123'))
@@ -37,7 +37,7 @@ class HostNameTest(unittest.TestCase):
 
     def testValidateRequired(self):
         field = self._Field_Factory(title=u'HostName field', description=u'',
-            readonly=False, required=True)
+                                    readonly=False, required=True)
         field.validate(self._convert('host'))
         self.assertRaises(RequiredMissing, field.validate, None)
 
@@ -48,15 +48,15 @@ class HostNameTest(unittest.TestCase):
     def test_newlines(self):
         field = self._Field_Factory(title=u'HostName field')
         self.assertRaises(InvalidHostName, field.validate,
-            self._convert('host\nfoo'))
+                          self._convert('host\nfoo'))
 
 
 def test_suite():
     return unittest.TestSuite((
         doctest.DocFileSuite(
-                'README.txt',
-                optionflags=doctest.NORMALIZE_WHITESPACE|\
-                            doctest.ELLIPSIS|\
-                            doctest.IGNORE_EXCEPTION_DETAIL),
+            'README.txt',
+            optionflags=doctest.NORMALIZE_WHITESPACE |
+            doctest.ELLIPSIS |
+            doctest.IGNORE_EXCEPTION_DETAIL),
         unittest.makeSuite(HostNameTest),
-        ))
+    ))
