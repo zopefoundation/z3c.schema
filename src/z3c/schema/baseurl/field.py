@@ -38,8 +38,9 @@ class BaseURL(zope.schema.URI):
     """
 
     def _validate(self, value):
-        if isValidBaseURL(value) and value.endswith('/') and \
-                and not value.endswith(':/'):
+        if (isValidBaseURL(value)
+                and value.endswith('/')
+                and not value.endswith(':/')):
             return
 
         raise interfaces.InvalidBaseURL(value)
