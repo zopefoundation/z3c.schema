@@ -55,8 +55,8 @@ def test_suite():
     return unittest.TestSuite((
         doctest.DocFileSuite(
             'README.txt',
-            optionflags=doctest.NORMALIZE_WHITESPACE |
-            doctest.ELLIPSIS |
-            doctest.IGNORE_EXCEPTION_DETAIL),
+            optionflags=(doctest.NORMALIZE_WHITESPACE
+                         | doctest.ELLIPSIS
+                         | doctest.IGNORE_EXCEPTION_DETAIL)),
         unittest.makeSuite(HostNameTest),
     ))
