@@ -11,9 +11,11 @@
 # FOR A PARTICULAR PURPOSE.
 #
 ##############################################################################
-"""
-$Id$
-"""
-
 from z3c.schema.dateselect.interfaces import IDateSelect
 from z3c.schema.dateselect.field import DateSelect
+
+
+__all__ = [
+    'IDateSelect',
+    'DateSelect',
+]

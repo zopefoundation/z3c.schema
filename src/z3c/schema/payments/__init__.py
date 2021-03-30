@@ -11,11 +11,16 @@
 # FOR A PARTICULAR PURPOSE.
 #
 ##############################################################################
-"""
-$Id$
-"""
-
-from z3c.schema.payments.interfaces import *
+from z3c.schema.payments.interfaces import IISO7812CreditCard
+from z3c.schema.payments.interfaces import NotValidISO7812CreditCard
 from z3c.schema.payments.field import isValidCreditCard
 from z3c.schema.payments.field import ISO7812CreditCard
 from z3c.schema.payments.field import ISO7812CreditCard as CreditCard
+
+__all__ = [
+    'IISO7812CreditCard',
+    'NotValidISO7812CreditCard',
+    'isValidCreditCard',
+    'ISO7812CreditCard',
+    'CreditCard',
+]

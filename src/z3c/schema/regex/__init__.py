@@ -11,9 +11,12 @@
 # FOR A PARTICULAR PURPOSE.
 #
 ##############################################################################
-"""
-$Id$
-"""
-
-from z3c.schema.regex.interfaces import *
+from z3c.schema.regex.interfaces import IRegex, InvalidRegex
 from z3c.schema.regex.field import Regex
+
+
+__all__ = [
+    'IRegex',
+    'InvalidRegex',
+    'Regex',
+]

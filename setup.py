@@ -16,38 +16,25 @@
 import os
 from setuptools import setup, find_packages
 
+
 def read(*rnames):
     with open(os.path.join(os.path.dirname(__file__), *rnames)) as f:
         text = f.read()
     return text + '\n\n'
 
-def alltests():
-    import os
-    import sys
-    import unittest
-    # use the zope.testrunner machinery to find all the
-    # test suites we've put under ourselves
-    import zope.testrunner.find
-    import zope.testrunner.options
-    here = os.path.abspath(os.path.join(os.path.dirname(__file__), 'src'))
-    args = sys.argv[:]
-    defaults = ["--test-path", here]
-    options = zope.testrunner.options.get_options(args, defaults)
-    suites = list(zope.testrunner.find.find_suites(options))
-    return unittest.TestSuite(suites)
 
 setup(
-    name = 'z3c.schema',
+    name='z3c.schema',
     version=read('version.txt').strip(),
-    author = 'Zope Community',
-    author_email = "zope-dev@zope.org",
-    description = "Additional schema fields for Zope 3",
+    author='Zope Community',
+    author_email="zope-dev@zope.org",
+    description="Additional schema fields for Zope 3",
     long_description=(
         read('README.rst')
     ),
-    license = 'ZPL 2.1',
-    keywords = 'zope zope3 z3c schema',
-    classifiers = [
+    license='ZPL 2.1',
+    keywords='zope zope3 z3c schema',
+    classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
@@ -60,6 +47,7 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
         'Programming Language :: Python :: Implementation :: CPython',
         'Programming Language :: Python :: Implementation :: PyPy',
         'Natural Language :: English',
@@ -67,27 +55,27 @@ setup(
         'Topic :: Internet :: WWW/HTTP',
         'Framework :: Zope :: 3'
     ],
-    url = 'http://pypi.python.org/pypi/z3c.schema',
-    packages = find_packages('src'),
+    url='https://github.com/zopefoundation/z3c.schema',
+    packages=find_packages('src'),
     include_package_data=True,
-    package_dir = {'':'src'},
-    namespace_packages=['z3c',],
-    extras_require = dict(
-      test=[
-          'zope.testing',
-          'zope.testrunner',
-      ]
+    package_dir={'': 'src'},
+    namespace_packages=['z3c', ],
+    extras_require=dict(
+        test=[
+            'zope.testing',
+            'zope.testrunner',
+        ],
+        docs=[
+            'Sphinx',
+            'repoze.sphinx.autointerface',
+            'sphinx_rtd_theme',
+        ],
     ),
-    install_requires = [
-      'setuptools',
-      'zope.i18nmessageid',
-      'zope.interface',
-      'zope.schema >= 3.6',
+    install_requires=[
+        'setuptools',
+        'zope.i18nmessageid',
+        'zope.interface',
+        'zope.schema >= 3.6',
     ],
-    tests_require = [
-        'zope.testing',
-        'zope.testrunner',
-    ],
-    test_suite = '__main__.alltests',
     zip_safe=False,
 )

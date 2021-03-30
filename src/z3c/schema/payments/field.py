@@ -16,6 +16,7 @@
 import zope.interface
 from . import interfaces
 
+
 def isValidCreditCard(cardNum):
     """Returns True if the credit card number is a valid Luhn (Mod 10) number
        and False if not. This, of course, does not validate the number, but
@@ -23,7 +24,7 @@ def isValidCreditCard(cardNum):
        return a false positive if they offset one another, but the likelihood
        is low and pre-validating is fast"""
 
-    financialIndustries = ['3','4','5','6']
+    financialIndustries = ['3', '4', '5', '6']
     if cardNum[0] not in financialIndustries:
         return False
 
@@ -39,6 +40,7 @@ def isValidCreditCard(cardNum):
     if total % 10 == 0:
         return True
     return False
+
 
 @zope.interface.implementer(interfaces.IISO7812CreditCard)
 class ISO7812CreditCard(zope.schema.TextLine):

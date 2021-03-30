@@ -11,12 +11,7 @@
 # FOR A PARTICULAR PURPOSE.
 #
 ##############################################################################
-"""Date Selection field implementation
-
-$Id$
-"""
-__docformat__ = "reStructuredText"
-
+"""Date Selection field implementation."""
 import zope.interface
 import zope.schema
 
@@ -27,7 +22,7 @@ from z3c.schema.dateselect import interfaces
 class DateSelect(zope.schema.Date):
 
     yearRange = list(range(1900, 2100))
-    initialDate = None # set a date or today is used
+    initialDate = None  # set a date or today is used
 
     def __init__(self, yearRange=None, initialDate=None, **kw):
         super(DateSelect, self).__init__(**kw)

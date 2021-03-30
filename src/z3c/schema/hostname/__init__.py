@@ -11,10 +11,14 @@
 # FOR A PARTICULAR PURPOSE.
 #
 ##############################################################################
-"""
-$Id$
-"""
-
-from z3c.schema.hostname.interfaces import *
+from z3c.schema.hostname.interfaces import IHostName, InvalidHostName
 from z3c.schema.hostname.field import isValidHostName
 from z3c.schema.hostname.field import HostName
+
+
+__all__ = [
+    'IHostName',
+    'InvalidHostName',
+    'isValidHostName',
+    'HostName',
+]

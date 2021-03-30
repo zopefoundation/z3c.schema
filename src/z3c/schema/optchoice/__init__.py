@@ -11,9 +11,12 @@
 # FOR A PARTICULAR PURPOSE.
 #
 ##############################################################################
-"""
-$Id$
-"""
-
 from z3c.schema.optchoice.interfaces import IOptionalChoice
 from z3c.schema.optchoice.field import OptionalChoice
+
+
+__all__ = [
+
+    'IOptionalChoice',
+    'OptionalChoice',
+]

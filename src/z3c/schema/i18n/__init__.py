@@ -11,12 +11,7 @@
 # FOR A PARTICULAR PURPOSE.
 #
 ##############################################################################
-"""I18n utils for zope3
-
-$Id$
-"""
-__docformat__ = "reStructuredText"
-
+"""I18n utils for zope3."""
 import zope.i18nmessageid
 
 MessageFactory = zope.i18nmessageid.MessageFactory('z3c.schema')

@@ -26,7 +26,7 @@ from z3c.schema.baseurl import interfaces
 isValidBaseURL = re.compile(
     r"[a-zA-Z0-9+.-]+:"   # scheme
     r"\S*$"               # non space (should be pickier)
-    ).match
+).match
 
 
 @zope.interface.implementer(interfaces.IBaseURL)
@@ -38,8 +38,9 @@ class BaseURL(zope.schema.URI):
     """
 
     def _validate(self, value):
-        if isValidBaseURL(value) and value.endswith('/') and \
-            not value.endswith(':/'):
+        if (isValidBaseURL(value)
+                and value.endswith('/')
+                and not value.endswith(':/')):
             return
 
         raise interfaces.InvalidBaseURL(value)

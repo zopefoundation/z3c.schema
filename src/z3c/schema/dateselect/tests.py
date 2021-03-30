@@ -12,10 +12,9 @@
 #
 ##############################################################################
 import doctest
-import unittest
 
 
 def test_suite():
     return doctest.DocFileSuite(
         'README.txt',
-        optionflags=doctest.NORMALIZE_WHITESPACE|doctest.ELLIPSIS)
+        optionflags=doctest.NORMALIZE_WHITESPACE | doctest.ELLIPSIS)

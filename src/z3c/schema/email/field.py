@@ -55,7 +55,8 @@ def isValidMailAddress(addr):
         return False
     count = 0
     while c < len(addr):
-        # Make sure that domain does not end with a dot or has two dots in a row
+        # Make sure that domain does not end with a dot or has two dots in a
+        # row
         if addr[c] == '.':
             if c == domain or addr[c - 1] == '.':
                 return False

@@ -13,7 +13,6 @@
 ##############################################################################
 """Date Selection Field interfaces
 
-$Id$
 """
 __docformat__ = "reStructuredText"
 
@@ -25,4 +24,5 @@ class IDateSelect(zope.schema.interfaces.IDate):
     yearRange = zope.interface.Attribute(u"Year range.")
 
     initialDate = zope.interface.Attribute(
-        u"Initial date displayed or ``None``. If ``None``, `today()`` is used.")
+        u"Initial date displayed or ``None``. If ``None``, `today()`` is used."
+    )

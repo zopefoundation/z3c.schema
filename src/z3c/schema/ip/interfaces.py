@@ -18,8 +18,10 @@ import zope.schema.interfaces
 
 from z3c.schema.i18n import MessageFactory as _
 
+
 class IIPAddress(zope.schema.interfaces.INativeStringLine):
     """A valid IP address field."""
+
 
 class NotValidIPAdress(zope.schema.ValidationError):
     __doc__ = _("""Not a valid IP address.""")
