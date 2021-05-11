@@ -2,7 +2,7 @@
 # https://github.com/zopefoundation/meta/tree/master/config/pure-python
 [meta]
 template = "pure-python"
-commit-id = "ff37be82c6e4d7c4f0f96f4937f2d14d1aadae67"
+commit-id = "f8468b0bc5c92479b3043372d89cf5852176015d"
 
 [python]
 with-appveyor = false
@@ -29,4 +29,6 @@ ignore-bad-ideas = [
 additional-rules = [
     "recursive-include src *.po",
     "recursive-include src *.pot",
+    "recursive-include src *.txt",
+    "recursive-include src *.zcml",
     ]
