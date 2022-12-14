@@ -11,8 +11,8 @@
 # FOR A PARTICULAR PURPOSE.
 #
 ##############################################################################
-from z3c.schema.dateselect.interfaces import IDateSelect
 from z3c.schema.dateselect.field import DateSelect
+from z3c.schema.dateselect.interfaces import IDateSelect
 
 
 __all__ = [

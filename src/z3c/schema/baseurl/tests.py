@@ -15,9 +15,11 @@
 """
 import doctest
 import unittest
+
 from zope.schema.interfaces import RequiredMissing
 
-from z3c.schema.baseurl import BaseURL, InvalidBaseURL
+from z3c.schema.baseurl import BaseURL
+from z3c.schema.baseurl import InvalidBaseURL
 
 
 class BaseURLTest(unittest.TestCase):

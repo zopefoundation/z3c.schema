@@ -22,6 +22,7 @@ import zope.schema
 
 from z3c.schema.baseurl import interfaces
 
+
 #: Determine whether the URL is a base URL.
 isValidBaseURL = re.compile(
     r"[a-zA-Z0-9+.-]+:"   # scheme

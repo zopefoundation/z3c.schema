@@ -17,7 +17,8 @@ __docformat__ = "reStructuredText"
 
 import zope.interface
 import zope.schema
-from zope.schema.interfaces import IField, ValidationError
+from zope.schema.interfaces import IField
+from zope.schema.interfaces import ValidationError
 
 from z3c.schema.optchoice import interfaces
 

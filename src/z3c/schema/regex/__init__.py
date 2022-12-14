@@ -11,8 +11,9 @@
 # FOR A PARTICULAR PURPOSE.
 #
 ##############################################################################
-from z3c.schema.regex.interfaces import IRegex, InvalidRegex
 from z3c.schema.regex.field import Regex
+from z3c.schema.regex.interfaces import InvalidRegex
+from z3c.schema.regex.interfaces import IRegex
 
 
 __all__ = [
