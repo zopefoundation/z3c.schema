@@ -5,9 +5,10 @@
 ###############################################################################
 """Refline Recruiter Tests
 """
-from zope.schema.interfaces import RequiredMissing
 import doctest
 import unittest
+
+from zope.schema.interfaces import RequiredMissing
 
 from z3c.schema.hostname import HostName
 from z3c.schema.hostname import InvalidHostName

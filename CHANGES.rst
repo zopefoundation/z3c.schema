@@ -5,7 +5,7 @@ CHANGES
 1.2.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add support for Python 3.11.
 
 
 1.2.0 (2022-04-11)

@@ -21,6 +21,7 @@ import zope.schema
 
 from z3c.schema.email import interfaces
 
+
 rfc822_specials = '()<>@,;:\\"[]'
 
 

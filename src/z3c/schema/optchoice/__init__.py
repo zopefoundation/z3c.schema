@@ -11,8 +11,8 @@
 # FOR A PARTICULAR PURPOSE.
 #
 ##############################################################################
-from z3c.schema.optchoice.interfaces import IOptionalChoice
 from z3c.schema.optchoice.field import OptionalChoice
+from z3c.schema.optchoice.interfaces import IOptionalChoice
 
 
 __all__ = [

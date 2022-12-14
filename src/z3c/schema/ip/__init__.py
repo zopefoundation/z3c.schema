@@ -11,9 +11,10 @@
 # FOR A PARTICULAR PURPOSE.
 #
 ##############################################################################
-from z3c.schema.ip.interfaces import IIPAddress, NotValidIPAdress
-from z3c.schema.ip.field import isValidIPAddress
 from z3c.schema.ip.field import IPAddress
+from z3c.schema.ip.field import isValidIPAddress
+from z3c.schema.ip.interfaces import IIPAddress
+from z3c.schema.ip.interfaces import NotValidIPAdress
 
 
 __all__ = [
