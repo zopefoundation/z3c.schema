@@ -353,9 +353,9 @@ intersphinx_mapping = {
 }
 
 extlinks = {'issue': ('https://github.com/zopefoundation/z3c.schema/issues/%s',
-                      'issue #'),
+                      'issue %s'),
             'pr': ('https://github.com/zopefoundation/z3c.schema/pull/%s',
-                   'pull request #')}
+                   'pull request %s')}
 
 autodoc_default_flags = ['members', 'show-inheritance']
 autoclass_content = 'both'
