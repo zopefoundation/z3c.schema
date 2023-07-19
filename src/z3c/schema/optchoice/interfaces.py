@@ -45,5 +45,5 @@ class IOptionalChoice(zope.schema.interfaces.IChoice,
 
     value_type = zope.schema.Field(
         title=_("Value Type"),
-        description=_(u"The freely entered values must be of this type."),
+        description=_("The freely entered values must be of this type."),
         required=True)

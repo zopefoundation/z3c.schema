@@ -28,7 +28,7 @@ class OptionalChoice(zope.schema.Choice):
     """Optional Choice field."""
 
     def __init__(self, value_type, **kw):
-        super(OptionalChoice, self).__init__(**kw)
+        super().__init__(**kw)
         # whine if value_type is not a field
         if value_type is not None and not IField.providedBy(value_type):
             raise ValueError("'value_type' must be field instance.")
@@ -36,12 +36,12 @@ class OptionalChoice(zope.schema.Choice):
 
     def _validate(self, value):
         try:
-            super(OptionalChoice, self)._validate(value)
+            super()._validate(value)
         except ValidationError:
             self.value_type._validate(value)
 
     def fromUnicode(self, value):
         try:
-            return super(OptionalChoice, self).fromUnicode(value)
+            return super().fromUnicode(value)
         except ValidationError:
             return self.value_type.fromUnicode(value)

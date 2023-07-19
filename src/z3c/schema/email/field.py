@@ -83,6 +83,6 @@ class RFC822MailAddress(zope.schema.TextLine):
         return '\n' not in value and '\r' not in value
 
     def _validate(self, value):
-        super(RFC822MailAddress, self)._validate(value)
+        super()._validate(value)
         if not isValidMailAddress(value):
             raise interfaces.NotValidRFC822MailAdress(value)
