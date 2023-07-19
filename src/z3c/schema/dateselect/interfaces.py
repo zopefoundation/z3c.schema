@@ -21,8 +21,8 @@ import zope.schema.interfaces
 
 class IDateSelect(zope.schema.interfaces.IDate):
 
-    yearRange = zope.interface.Attribute(u"Year range.")
+    yearRange = zope.interface.Attribute("Year range.")
 
     initialDate = zope.interface.Attribute(
-        u"Initial date displayed or ``None``. If ``None``, `today()`` is used."
+        "Initial date displayed or ``None``. If ``None``, `today()`` is used."
     )

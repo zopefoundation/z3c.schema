@@ -41,7 +41,7 @@ class IPAddress(zope.schema.NativeStringLine):
     """A valid IP address."""
 
     def _validate(self, value):
-        super(IPAddress, self)._validate(value)
+        super()._validate(value)
 
         if not isValidIPAddress(value):
             raise interfaces.NotValidIPAdress(value)

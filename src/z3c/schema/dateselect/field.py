@@ -25,7 +25,7 @@ class DateSelect(zope.schema.Date):
     initialDate = None  # set a date or today is used
 
     def __init__(self, yearRange=None, initialDate=None, **kw):
-        super(DateSelect, self).__init__(**kw)
+        super().__init__(**kw)
         self.initialDate = initialDate
         if yearRange is not None:
             self.yearRange = yearRange

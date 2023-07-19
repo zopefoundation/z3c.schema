@@ -56,6 +56,6 @@ class ISO7812CreditCard(zope.schema.TextLine):
         return '\n' not in value and '\r' not in value and allDigits
 
     def _validate(self, value):
-        super(ISO7812CreditCard, self)._validate(value)
+        super()._validate(value)
         if not isValidCreditCard(value):
             raise interfaces.NotValidISO7812CreditCard(value)

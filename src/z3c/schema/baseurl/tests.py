@@ -28,7 +28,7 @@ class BaseURLTest(unittest.TestCase):
     _convert = str
 
     def testValidate(self):
-        field = self._Field_Factory(title=u'BaseURL field', description=u'',
+        field = self._Field_Factory(title='BaseURL field', description='',
                                     readonly=False, required=False)
         field.validate(None)
         field.validate(self._convert('host:123.123.123.123/'))
@@ -37,16 +37,16 @@ class BaseURLTest(unittest.TestCase):
         field.validate(self._convert('http://123.123.123.123:123/'))
 
     def testValidateRequired(self):
-        field = self._Field_Factory(title=u'BaseURL field', description=u'',
+        field = self._Field_Factory(title='BaseURL field', description='',
                                     readonly=False, required=True)
         self.assertRaises(RequiredMissing, field.validate, None)
 
     def testBadStringType(self):
-        field = self._Field_Factory(title=u'BaseURL field')
-        self.assertRaises(InvalidBaseURL, field.validate, u'123.123')
+        field = self._Field_Factory(title='BaseURL field')
+        self.assertRaises(InvalidBaseURL, field.validate, '123.123')
 
     def test_newlines(self):
-        field = self._Field_Factory(title=u'BaseURL field')
+        field = self._Field_Factory(title='BaseURL field')
         self.assertRaises(InvalidBaseURL, field.validate,
                           self._convert('host\nfoo'))
 
@@ -58,5 +58,5 @@ def test_suite():
             optionflags=(doctest.NORMALIZE_WHITESPACE
                          | doctest.ELLIPSIS
                          | doctest.IGNORE_EXCEPTION_DETAIL)),
-        unittest.makeSuite(BaseURLTest),
+        unittest.defaultTestLoader.loadTestsFromTestCase(BaseURLTest),
     ))

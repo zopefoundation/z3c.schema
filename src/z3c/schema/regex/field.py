@@ -31,11 +31,11 @@ class Regex(zope.schema.ASCIILine):
     """
 
     def _validate(self, value):
-        super(Regex, self)._validate(value)
+        super()._validate(value)
         try:
             re.compile(value)
         except re.error as e:
-            raise interfaces.InvalidRegex('%r, %s' % (value, e))
+            raise interfaces.InvalidRegex('{!r}, {}'.format(value, e))
 
     def fromUnicode(self, value):
         v = str(value.strip())

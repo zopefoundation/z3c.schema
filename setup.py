@@ -29,7 +29,7 @@ setup(
     name='z3c.schema',
     version=read('version.txt').strip(),
     author='Zope Community',
-    author_email="zope-dev@zope.org",
+    author_email="zope-dev@zope.dev",
     description="Additional schema fields for Zope 3",
     long_description=(
         read('README.rst')
@@ -42,11 +42,7 @@ setup(
         'Intended Audience :: Developers',
         'License :: OSI Approved :: Zope Public License',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
@@ -64,6 +60,7 @@ setup(
     include_package_data=True,
     package_dir={'': 'src'},
     namespace_packages=['z3c', ],
+    python_requires='>=3.7',
     extras_require=dict(
         test=[
             'zope.testing',
