@@ -1,3 +1,7 @@
+.. image:: https://readthedocs.org/projects/z3cschema/badge/?version=latest
+    :target: https://z3cschema.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
+
 This package provides different additional Zope 3 schema fields.
 
 The provided fields include support for:
