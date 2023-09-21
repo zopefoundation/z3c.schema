@@ -1,5 +1,5 @@
 This package provides different additional Zope 3 schema fields.
- 
+
 The provided fields include support for:
 
 - Base URLs
