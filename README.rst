@@ -1,3 +1,10 @@
+.. caution::
+
+    This repository is no longer maintained and thus it got archived.
+
+    If you want to work on it please open a ticket in
+    https://github.com/zopefoundation/meta/issues requesting its unarchival.
+
 .. image:: https://readthedocs.org/projects/z3cschema/badge/?version=latest
     :target: https://z3cschema.readthedocs.io/en/latest/?badge=latest
     :alt: Documentation Status
